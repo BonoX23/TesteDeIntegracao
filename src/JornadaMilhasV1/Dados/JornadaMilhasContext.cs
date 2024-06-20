@@ -13,6 +13,7 @@ public class JornadaMilhasContext: DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
+        //Caso não haja outro banco cadastrado, ou seja um banco em Docker por exemplo, ele usará o banco abaixo que é local.
         if (!optionsBuilder.IsConfigured)
         {
             optionsBuilder

@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Testcontainers.MsSql;
 
 namespace JornadaMilhas.Test.Integracao;
+
+//Para utilizarmos o mesmo banco e mesmas configurações, nós criamos uma ClassFixure.
 public class ContextoFixture : IAsyncLifetime
 {
     public JornadaMilhasContext Context { get; private set; }
